@@ -79,6 +79,10 @@
 - meta: flush_handlers
 
 - block:
+    - name: Reload systemd daemon
+      command: "{{ item }}"
+      with_items:
+        - systemctl daemon-reload
     - name: Enable and start the service
       service:
         name: wildfly
