@@ -77,3 +77,10 @@ wildfly_application_ssl_identity: '
 wildfly_https_listener: '
     <https-listener name="https-server" socket-binding="https"
      security-realm="ManagementRealm"/>'
+
+wildfly_java_opts: >
+    -Xms128m -Xmx256m
+    -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m
+    -Djava.net.preferIPv4Stack=true
+    -Djboss.modules.system.pkgs=$JBOSS_MODULES_SYSTEM_PKGS
+    -Djava.awt.headless=true
