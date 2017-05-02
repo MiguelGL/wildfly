@@ -84,3 +84,5 @@ wildfly_java_opts: >
     -Djava.net.preferIPv4Stack=true
     -Djboss.modules.system.pkgs=$JBOSS_MODULES_SYSTEM_PKGS
     -Djava.awt.headless=true
+
+wildfly_dont_log_users_creation: True
